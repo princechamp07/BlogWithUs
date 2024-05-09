@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 
 export default defineConfig({
+  base:"/BlogWithUs/",
   plugins: [react()],
-  base:'/BlogWithUs/',
   resolve: {
     alias: {
       "@": path.resolve("./src"),

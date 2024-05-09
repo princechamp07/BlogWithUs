@@ -10,11 +10,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route extact path='/' element={<Login/>}/>
-        <Route  path='home' element={<Home/>}/>
-        <Route  path='create' element={<CreatePost/>}/>
-        <Route  path='Posts' element={<Posts/>}/>
-        <Route exact path="post/:id" element={<PostDetails/>} />
+        <Route extact path='BlogWithUs/' element={<Login/>}/>
+        <Route  path='BlogWithUs/home' element={<Home/>}/>
+        <Route  path='BlogWithUs/create' element={<CreatePost/>}/>
+        <Route  path='BlogWithUs/Posts' element={<Posts/>}/>
+        <Route exact path="BlogWithUs/post/:id" element={<PostDetails/>} />
       </Routes>
     </Router>
   );
