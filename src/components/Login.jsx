@@ -88,7 +88,7 @@ function Login(props) {
                        Sign In With Google
                    </Button>
                    <Button className="flex mt-4 bg-blue-700 justify-center  text-center items-center h-10 w-full">
-                       <Link to="/Posts">
+                       <Link to="BlogWithUs/Posts">
                            Check Posts as guest
                        </Link>
                    </Button>
