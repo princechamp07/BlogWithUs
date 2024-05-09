@@ -42,7 +42,7 @@ const Posts = () => {
   };
 
   const handlePostClick = (postId) => {
-    navigate(`post/${postId}`);
+    navigate(`/post/${postId}`);
   };
 
   const handleDeleteClick = (e, postId) => {

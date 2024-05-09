@@ -14,7 +14,7 @@ function App() {
         <Route  path='BlogWithUs/home' element={<Home/>}/>
         <Route  path='BlogWithUs/create' element={<CreatePost/>}/>
         <Route  path='BlogWithUs/Posts' element={<Posts/>}/>
-        <Route exact path="BlogWithUs/post/:id" element={<PostDetails/>} />
+        <Route exact path="BlogWithUs/Posts/post/:id" element={<PostDetails/>} />
       </Routes>
     </Router>
   );
