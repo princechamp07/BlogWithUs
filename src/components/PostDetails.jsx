@@ -11,8 +11,9 @@ const PostDetails = () => {
     const fetchPostDetails = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(`http://localhost:8000/posts/${id}`);
-        setPostDetails(response.data);
+        const response = await axios.get('https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json');
+        const postData = response.data.posts.find(post => post.id === id);
+        setPostDetails(postData);
       } catch (error) {
         console.error('Error fetching post details:', error);
       }

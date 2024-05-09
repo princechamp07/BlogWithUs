@@ -34,7 +34,7 @@ function Login(props) {
        signInWithPopup(auth, provider)
            .then((result) => {
                setUser(result.user);
-               navigate("/home");
+               navigate("home");
            })
            .catch((e) => {
                alert(e.message);

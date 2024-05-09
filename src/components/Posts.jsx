@@ -15,16 +15,22 @@ const Posts = () => {
   useEffect(() => {
     const loadPosts = async () => {
       setLoading(true);
-      const response = await axios.get("https://github.com/princechamp07/BlogWithUs/blob/main/src/data/db.json");
-      setPosts(response.data);
-      setLoading(false);
+      try {
+        const response = await axios.get('https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json');
+        setPosts(response.data.posts);
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      } finally {
+        setLoading(false);
+      }
     };
+  
     loadPosts();
   }, []);
 
   const handleDelete = async (postId) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/posts/${postId}`);
+      const response = await axios.delete(`https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json/${postId}`);
       if (response.status === 200) {
         setPosts(posts.filter((post) => post.id !== postId));
       } else {
@@ -36,7 +42,7 @@ const Posts = () => {
   };
 
   const handlePostClick = (postId) => {
-    navigate(`/post/${postId}`);
+    navigate(`post/${postId}`);
   };
 
   const handleDeleteClick = (e, postId) => {
