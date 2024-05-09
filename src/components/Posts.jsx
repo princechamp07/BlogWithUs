@@ -15,7 +15,7 @@ const Posts = () => {
   useEffect(() => {
     const loadPosts = async () => {
       setLoading(true);
-      const response = await axios.get("http://localhost:8000/posts");
+      const response = await axios.get("https://github.com/princechamp07/BlogWithUs/blob/main/src/data/db.json");
       setPosts(response.data);
       setLoading(false);
     };
