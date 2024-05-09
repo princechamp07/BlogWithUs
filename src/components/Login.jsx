@@ -63,7 +63,7 @@ function Login(props) {
 
 
    return (
-       <div className="bg-[url('./images/Bg.webp')] flex justify-center items-center bg-[cover] bg-no-repeat h-screen w-full">
+       <div className="bg-[url('../images/Bg.webp')] flex justify-center items-center bg-[cover] bg-no-repeat h-screen w-full">
            <div className="bg-gray-200 flex flex-col px-24 py-4 justify-center">
                <div className='font-bold justify-center mx-auto flex flex-col text-lg font-serif'>
                    <div className='flex mt-4  justify-center'>
@@ -88,7 +88,7 @@ function Login(props) {
                        Sign In With Google
                    </Button>
                    <Button className="flex mt-4 bg-blue-700 justify-center  text-center items-center h-10 w-full">
-                       <Link to="BlogWithUs/Posts">
+                       <Link to="/Posts">
                            Check Posts as guest
                        </Link>
                    </Button>
