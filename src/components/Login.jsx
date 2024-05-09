@@ -84,7 +84,7 @@ function Login(props) {
 
                <div className=" w-96 mb-12">
                    <Button onClick={handleAuth} className="flex justify-center  text-center items-center h-10 w-full">
-                       <img src="./images/google.svg" alt="" />
+                       <img src="../images/google.svg" alt="" />
                        Sign In With Google
                    </Button>
                    <Button className="flex mt-4 bg-blue-700 justify-center  text-center items-center h-10 w-full">
