@@ -1,11 +1,11 @@
-import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { selectUserName, setSignOutState, setUserLoginDetails } from "../app/userSlice";
 
 import { Button } from "./ui/button";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function Login(props) {
    const dispatch = useDispatch();
@@ -16,7 +16,7 @@ function Login(props) {
        auth.onAuthStateChanged(async (user) => {
            if (user) {
                setUser(user);
-               navigate("BlogWithUs/home");
+               navigate("home");
            }
        });
    }, [user]);
