@@ -64,7 +64,7 @@ dispatch(
                     <div className='text-lg h-72 border-b border-solid border-slate-300 font-serif py-4 px-4 flex flex-col gap-2'>
                     {username ? (<div className={`flex gap-2 py-1 rounded-sm px-2 hover:bg-slate-300 cursor-pointer ${activePage === "/home" && "bg-white"}`}>
                         <img className='w-6' src="./images/community.svg" alt="" />
-                        <Link to="home">
+                        <Link to="BlogWithUs/home">
                             Dashboard
                         </Link>
                     </div>):(
@@ -72,13 +72,13 @@ dispatch(
                     )}
                     <div className={`flex gap-2 py-1 rounded-sm px-2 hover:bg-slate-300 cursor-pointer ${activePage === "/create" && "bg-white"}`}>
                          <img className='w-6' src="./images/community.svg" alt="" />
-                        <Link to="/create">
+                        <Link to="BlogWithUs/create">
                             Create Post
                         </Link>
                     </div>
                     <div className={`flex gap-2 py-1 rounded-sm px-2 hover:bg-slate-300 cursor-pointer ${activePage === "/Posts" && "bg-white"}`}>
                          <img className='w-6' src="./images/community.svg" alt="" />
-                        <Link to="/Posts">
+                        <Link to="BlogWithUs/Posts">
                             Veiw Posts
                         </Link>
                     </div>
