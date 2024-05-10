@@ -45,8 +45,11 @@ const CreatePost = () => {
     setPostData((prevData) => ({
       ...prevData,
       [name]: value,
+      
     }));
   };
+
+  
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -68,7 +71,7 @@ const CreatePost = () => {
 
   
       if (response.ok) {
-        navigate("Posts")
+        navigate("/Posts")
         toast.success('Post published successfully!', {
           position: "top-right",
           autoClose: 3000, 
@@ -127,12 +130,9 @@ const CreatePost = () => {
                     onChange={handleInputChange}
                   />
                 </div>
-                
                 <div>
-      <Label htmlFor="picture">Picture</Label>
-      <Input id="picture" type="file" value={postData.media}
-                    onChange={handleInputChange}/>
-    
+                  <Label htmlFor="picture">Picture</Label>
+                  <Input id="picture" name="media" type="file" value={postData.media} onChange={handleInputChange} />
                 </div>
                 <div>
                   <Label>Publish Your Blog</Label>
