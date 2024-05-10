@@ -38,6 +38,7 @@ const PostDetails = () => {
               alt={`Photo of ${postDetails.author}`}
             /> {postDetails.author}</p>
           <p className="text-gray-600 mb-4">{postDetails.date}</p>
+          <p className="text-gray-600 mb-4">{postDetails.media}</p>
           <p className="leading-relaxed">{postDetails.content}</p>
           
         </div>
