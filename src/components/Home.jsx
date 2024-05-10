@@ -1,11 +1,12 @@
 import Sidebar from "./Sidebar";
 import LeftSection from "./LeftSection";
 import RightSection from "./RightSection";
-import { selectUserPhoto } from "../app/userSlice";
-import { useSelector } from "react-redux";
+
 import { Link } from "react-router-dom";
 import Chart from 'chart.js/auto';
 import { useEffect, useRef } from "react";
+
+
 
 function Home(props) {
   
@@ -50,7 +51,7 @@ function Home(props) {
         //Main
       }
       <div className="w-full">
-       
+   
         <div className="ml-6 mt-4 text-2xl font-mono text-slate-800 font-semibold ">
           Welcome to BlogWithUs
           <div className="text-sm font-normal text-slate-600">

@@ -6,8 +6,11 @@ import CreatePost from './components/CreatePost';
 import Posts from './components/Posts';
 import PostDetails from './components/PostDetails';
 
+
+
 function App() {
   return (
+    
     <Router>
       <Routes>
         <Route extact path='BlogWithUs/' element={<Login/>}/>
@@ -17,6 +20,7 @@ function App() {
         <Route exact path="BlogWithUs/Posts/post/:id" element={<PostDetails/>} />
       </Routes>
     </Router>
+  
   );
 }
 

@@ -13,8 +13,8 @@ function LeftSection(props) {
     const loadPost = async () => {
       
       setLoading(true);
-      const response = await axios.get('https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json');
-        setPosts(response.data.posts);
+      const response = await axios.get('http://localhost:8000/posts');
+        setPosts(response.data);
       setLoading(false);
     };
     loadPost();
@@ -26,6 +26,7 @@ function LeftSection(props) {
       <div className="bg-[#e2e1e1] mt-4  box-content">
         <div className="py-4 text-sm px-4">Manage 2 active</div>
         {
+          
           loading ? (
             <div className="text-center py-4">Loading Posts...</div>
           ):(

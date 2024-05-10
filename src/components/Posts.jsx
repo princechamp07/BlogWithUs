@@ -16,8 +16,8 @@ const Posts = () => {
     const loadPosts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json');
-        setPosts(response.data.posts);
+        const response = await axios.get('http://localhost:8000/posts');
+        setPosts(response.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
       } finally {
@@ -30,7 +30,7 @@ const Posts = () => {
 
   const handleDelete = async (postId) => {
     try {
-      const response = await axios.delete(`https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json/${postId}`);
+      const response = await axios.delete(`http://localhost:8000/posts/${postId}`);
       if (response.status === 200) {
         setPosts(posts.filter((post) => post.id !== postId));
       } else {
@@ -40,6 +40,7 @@ const Posts = () => {
       console.error("Error:", error);
     }
   };
+  
 
   const handlePostClick = (postId) => {
     navigate(`post/${postId}`);
@@ -93,13 +94,16 @@ const Posts = () => {
                   </button>
                 )}
               </div>
-              {username || post.author==="Guest" && ( // Conditionally render the delete button based on user authentication
+              {username===post.author || post.author==="Guest" ?( // Conditionally render the delete button based on user authentication
                 <button
                   onClick={(e) => handleDeleteClick(e, post.id)}
                   className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
                 >
                   Delete
                 </button>
+              ) :(
+                <>
+                </>
               )}
             </div>
           ))}

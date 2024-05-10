@@ -23,6 +23,7 @@ const CreatePost = () => {
     content: "",
     author: username || "Guest", 
     photo: userphoto || "https://images.macrumors.com/t/n4CqVR2eujJL-GkUPhv1oao_PmI=/1600x/article-new/2019/04/guest-user-250x250.jpg",
+    media:"",
   });
 
   if (!username) {
@@ -125,6 +126,13 @@ const CreatePost = () => {
                     value={postData.description}
                     onChange={handleInputChange}
                   />
+                </div>
+                
+                <div>
+      <Label htmlFor="picture">Picture</Label>
+      <Input id="picture" type="file" value={postData.media}
+                    onChange={handleInputChange}/>
+    
                 </div>
                 <div>
                   <Label>Publish Your Blog</Label>
