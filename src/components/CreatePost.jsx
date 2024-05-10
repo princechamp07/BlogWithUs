@@ -68,7 +68,7 @@ const CreatePost = () => {
 
   
       if (response.ok) {
-        navigate("/Posts")
+        navigate("Posts")
         toast.success('Post published successfully!', {
           position: "top-right",
           autoClose: 3000, 

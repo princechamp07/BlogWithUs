@@ -32,7 +32,7 @@ const Posts = () => {
     try {
       const response = await axios.delete(`http://localhost:8000/posts/${postId}`);
       if (response.status === 200) {
-        setPosts(posts.filter((post) => post.id !== postId));
+        setPosts(posts.filter((post) => post.id == postId));
       } else {
         console.error("Failed to delete the post");
       }
