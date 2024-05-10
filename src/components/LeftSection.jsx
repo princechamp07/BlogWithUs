@@ -13,8 +13,8 @@ function LeftSection(props) {
     const loadPost = async () => {
       
       setLoading(true);
-      const response = await axios.get("http://localhost:8000/posts");
-    setPosts(response.data);
+      const response = await axios.get('https://raw.githubusercontent.com/princechamp07/BlogWithUs/main/src/data/db.json');
+        setPosts(response.data.posts);
       setLoading(false);
     };
     loadPost();
@@ -58,7 +58,7 @@ function LeftSection(props) {
             )})}
         <div className="mx-auto justify-center flex">
           <button className="text-sm bg-white px-4 py-2 border border-black my-4">
-           <Link to="/Posts">
+           <Link to="Posts">
            View all posts
            </Link> 
           </button>
