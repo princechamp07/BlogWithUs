@@ -5,7 +5,6 @@ import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
 import { Label } from "./ui/label";
-import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUserName, selectUserPhoto } from "@/app/userSlice";
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,7 +14,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const CreatePost = () => {
   const username = useSelector(selectUserName);
   const userphoto = useSelector(selectUserPhoto);
-  const navigate = useNavigate();
+  
 
   const [postData, setPostData] = useState({
     title: "",
@@ -71,7 +70,6 @@ const CreatePost = () => {
 
   
       if (response.ok) {
-        navigate("/Posts")
         toast.success('Post published successfully!', {
           position: "top-right",
           autoClose: 3000, 
