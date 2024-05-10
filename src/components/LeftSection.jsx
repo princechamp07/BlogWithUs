@@ -58,7 +58,7 @@ function LeftSection(props) {
             )})}
         <div className="mx-auto justify-center flex">
           <button className="text-sm bg-white px-4 py-2 border border-black my-4">
-           <Link to="/Posts">
+           <Link to="Posts">
            View all posts
            </Link> 
           </button>

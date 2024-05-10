@@ -72,13 +72,13 @@ dispatch(
                     )}
                     <div className={`flex gap-2 py-1 rounded-sm px-2 hover:bg-slate-300 cursor-pointer ${activePage === "/create" && "bg-white"}`}>
                          <img className='w-6' src="./images/community.svg" alt="" />
-                        <Link to="create">
+                        <Link to="/create">
                             Create Post
                         </Link>
                     </div>
                     <div className={`flex gap-2 py-1 rounded-sm px-2 hover:bg-slate-300 cursor-pointer ${activePage === "/Posts" && "bg-white"}`}>
                          <img className='w-6' src="./images/community.svg" alt="" />
-                        <Link to="Posts">
+                        <Link to="/Posts">
                             Veiw Posts
                         </Link>
                     </div>
